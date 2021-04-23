@@ -18,6 +18,7 @@ function populateContent(){
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">Play</button>
+                  <a href="./backoffice.html?id=${item._id}" class="btn btn-sm btn-outline-secondary">Edit</a>
                   
                 </div>
                 <small class="text-muted">9 mins</small>
