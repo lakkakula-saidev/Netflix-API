@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Back Office</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="backOff.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg"
+      style="background-color: black"
+      id="navy"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="/assets/netflix_logo.png" alt="logo" height="50px" />
+        </a>
+      </div>
+    </nav>
+
+    <div class="profile-page">
+      <div class="container">
+        <form
+          class="needs-validation"
+          id="m-submit"
+          onsubmit="uploadMovie(event)"
+        >
+          <h1 class="text-light">BACK OFFICE</h1>
+          <hr />
+          <div class="row d-flex justify-content-center">
+            <div class="col-8">
+              <div class="row d-flex justify-content-between my-4">
+                <div class="col-md-4"><label for="m-name">Name</label></div>
+                <div class="col-md-8">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="m-name"
+                    placeholder="Movie Name"
+                    required
+                  />
+                  <div class="valid-tooltip">Looks good!</div>
+                </div>
+              </div>
+
+              <div class="row d-flex justify-content-between my-4">
+                <div class="col-md-4">
+                  <label for="m-description">Description</label>
+                </div>
+                <div class="col-md-8">
+                  <textarea
+                    type="text"
+                    class="form-control"
+                    id="m-description"
+                    placeholder="Provide a description for the product"
+                    rows="4"
+                    required
+                  ></textarea>
+                  <div class="valid-tooltip">Looks good!</div>
+                </div>
+              </div>
+              <div class="row d-flex justify-content-between my-4">
+                <div class="col-md-4">
+                  <label for="m-category">Category</label>
+                </div>
+                <div class="col-md-8">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="m-category"
+                    placeholder="Category of the Movie or TV series"
+                    required
+                  />
+                  <div class="valid-tooltip">Looks good!</div>
+                </div>
+              </div>
+
+              <div class="row d-flex justify-content-between my-4">
+                <div class="col-md-4"><label for="m-url">Image URL</label></div>
+                <div class="col-md-8">
+                  <input class="form-control" id="m-url" required />
+
+                  <div class="invalid-tooltip">Please select a valid URL.</div>
+                </div>
+              </div>
+
+              <!-- <div class="row d-flex justify-content-between my-4">
+                <div class="col-md-4">
+                  <label for="m-category">category</label>
+                </div>
+                <div class="col-md-8">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="m-category"
+                    required
+                  />
+                  <div class="invalid-tooltip">
+                    Please provide a valid category.
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-xl-5 col-md-2 col-sm-12 col-xs-12">
+              <button
+                class="btn btn-light mt-2 w-100"
+                class="btn btn-outline-primary"
+                id="m-submit"
+                type="submit"
+              >
+                SUBMIT ITEM
+              </button>
+            </div>
+            <div class="col-xl-5 col-md-5 col-sm-12 col-xs-12">
+              <button
+                class="btn btn-outline-secondary mt-2 w-100"
+                id="m-delete"
+                type="button"
+                onclick="deleteProduct()"
+              >
+                DELETE ITEM
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/backoffice.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
